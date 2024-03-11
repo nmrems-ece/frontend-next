@@ -12,17 +12,23 @@ import { Toaster, toast } from "react-hot-toast";
 const SignUp = () => {
   const router = useRouter();
   const [user, setUser] = useState({
-    fullname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
 
   const OnSignup = async () => {
-    if (user.fullname < 5 && user.email < 5 && user.password < 4) {
-      toast.error("All credentials are required and must be greater than 5 !");
-    }
+    // if (user.fullname < 5 && user.email < 5 && user.password < 4) {
+    //   toast.error("All credentials are required and must be greater than 5 !");
+    // }
     try {
-      const response = await axios.post("https://nmrems-backend.onrender.com/api/v1/auth/admin/signup", user);
+      const response = await axios.post("https://nmrems-backend.onrender.com/api/v1/auth/admin/signup", user, {
+        headers: {
+          "Content-Type": "application/json",
+          'x-admin-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjkzMDYzMDQ2OTkiLCJpYXQiOjE2OTcxOTU5NTd9.ynN7Xs-5T20Zhw_Vey7TyYASYoR5UfoT5l2SR6Lem2s'
+        },
+      });
       toast.success("Registration succcessful!");
       router.push("/signin");
       console.log(user);
@@ -66,16 +72,34 @@ const SignUp = () => {
             <br />
             <form>
               <div className="my-2 ">
-                <label htmlFor="email">Full Name</label>
+                <label htmlFor="email">First Name</label>
                 <br />
                 <div className="bg-slate-200 flex rounded">
                   <input
                     id="fullname"
                     className="w-64 bg-inherit border-none outline-none rounded ml-2"
                     type="text"
-                    value={user.fullname}
+                    value={user.firstName}
                     onChange={(e) =>
-                      setUser({ ...user, fullname: e.target.value })
+                      setUser({ ...user, firstName: e.target.value })
+                    }
+                  />
+                  <span className="my-2">
+                    <IoPersonOutline />
+                  </span>
+                </div>
+              </div>
+              <div className="my-2 ">
+                <label htmlFor="email">Last Name</label>
+                <br />
+                <div className="bg-slate-200 flex rounded">
+                  <input
+                    id="fullname"
+                    className="w-64 bg-inherit border-none outline-none rounded ml-2"
+                    type="text"
+                    value={user.lastName}
+                    onChange={(e) =>
+                      setUser({ ...user, lastName: e.target.value })
                     }
                   />
                   <span className="my-2">
@@ -101,7 +125,7 @@ const SignUp = () => {
                 </div>
               </div>
               <div className="my-2 ">
-                <label htmlFor="password">Create Password</label>
+                <label htmlFor="password"> Password</label>
                 <br />
                 <div className="bg-slate-200 flex rounded">
                   <input
@@ -114,19 +138,6 @@ const SignUp = () => {
                         password: e.target.value,
                       })
                     }
-                  />
-                  <span className="my-2">
-                    <FaRegEyeSlash onClick={passwordClick} />
-                  </span>
-                </div>
-              </div>
-              <div className="my-2">
-                <label htmlFor="confirmpassword">Confirm Password</label>
-                <br />
-                <div className="bg-slate-200 flex rounded">
-                  <input
-                    className="w-64 bg-inherit border-none outline-none rounded ml-2"
-                    type={type}
                   />
                   <span className="my-2">
                     <FaRegEyeSlash onClick={passwordClick} />
