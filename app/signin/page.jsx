@@ -19,7 +19,7 @@ const Login = () => {
   });
   const OnLogin = async () => {
     try {
-      const response = await axios.post("/api/users/signin", user);
+      const response = await axios.post("https://nmrems-backend.onrender.com/api/v1/auth/admin/signin", user);
       console.log("Login Successfull", response.data);
       toast.success("Login Successful");
       router.push("/dashboard");
@@ -105,7 +105,7 @@ const Login = () => {
                 className=" bg-[#1F263E] w-72 rounded  p-1.5 bg-slate-60o w-64 text-white"
                 onClick={OnLogin}
               >
-                SignUp
+                Sign in
               </button>
             </div>
             <p className="mt-4 bottom-0 flex justify-center">
