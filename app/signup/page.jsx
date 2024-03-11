@@ -22,7 +22,7 @@ const SignUp = () => {
       toast.error("All credentials are required and must be greater than 5 !");
     }
     try {
-      const response = await axios.post("/api/users/signup", user);
+      const response = await axios.post("https://nmrems-backend.onrender.com/api/v1/auth/admin/signup", user);
       toast.success("Registration succcessful!");
       router.push("/signin");
       console.log(user);

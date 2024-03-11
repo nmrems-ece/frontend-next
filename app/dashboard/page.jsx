@@ -48,7 +48,7 @@ const page = ({ title, price, image, rate, arrow }) => {
     };
   
   return (
-    <div className="flex bg-white h-screen w-screen">
+    <div className="flex bg-white h-screen w-screen overflow-hidden">
       <div className="h-full w-full bg-gray-200 flex scroll">
         <div className="bg-gray-200 w-1/6 flex">
           <div className="bg-[#1F263E] w-screen ">
@@ -86,7 +86,7 @@ const page = ({ title, price, image, rate, arrow }) => {
                   <div>
                     <Faq />
                   </div>
-                  <div className="bottom-0 ">
+                  <div className="ml-6">
                     <LogOut />
                   </div>
                 </li>
@@ -113,20 +113,7 @@ const page = ({ title, price, image, rate, arrow }) => {
           </div>
           <div>
             <div className="bg-inherit overflow-hiddden m-2">
-              <MediaCard
-                news=" Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica"
-                image={discovery1}
-                title="Bauxite Ore Discovered in Niger State"
-              />
-            </div>
-            <div className="bg-inherit overflow-hiddden m-2">
-              <MediaCard
-                news=" Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica"
-                image={discovery1}
-                title="Bauxite Ore Discovered in Niger State"
-              />
+           
             </div>
           </div>
         </div>
