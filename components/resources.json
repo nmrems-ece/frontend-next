@@ -1,0 +1,148 @@
+
+
+const data=[
+  {
+    "state":"Abia",
+    "minerals":"Gold, Lead/Zinc, Limestone, Oil/Gas & Salt"
+  } ,
+  {
+    "state":"Abuja",
+    "minerals":"Cassiterite, Clay, Dolomite, Gold, Lead/Zinc, Marble & Tantalite"
+
+  } ,
+  
+    {
+        "state":"Adamawa",
+        "minerals":"Bentonite, Gypsium, Kaolin & Magnesitee"
+    
+      } ,
+      {
+        "state":"Akwa Iboma",
+        "minerals":"Clay, Lead/Zinc, Lignite, Limestone, Oil/Gas, Salt & Uranium"
+    
+      } , {
+        "state":"Anambra",
+        "minerals":"Clay, Glass-Sand, Gypsium, Iron-ore, Lead/Zinc, Lignite, Limestone, Phosphate & Salt"
+    
+      } , {
+        "state":"Bauchi",
+        "minerals":"Glay, Gypsium, Lead/Zinc, Lignite, Limestone, Maganese, Oil/Gas & Uranium"
+      } , {
+        "state":"Bayelsa",
+        "minerals":"Cassiterite, Clay, Dolomite, Gold, Lead/Zinc, Marble & Tantalite"
+    
+      } , {
+        "state":"Benue",
+        "minerals":"Barite, Clay, Coal, Gemstone, Gypsium, Iron-Ore, Lead/Zinc, Limestone, Marble & Salt"
+    
+      } ,
+      {
+        "state":"Borno",
+        "minerals":"Bentonite, Clay, Diatomite, Gypsium, Hydro-carbon, Kaolin & Limestonet"
+    
+      } ,
+      {
+        "state":"Cross River",
+        "minerals":"Barite, Lead/Zinc, Lignite, Limestone, Manganese, Oil/Gas, Salt & Uranium"
+    
+      },
+      {
+        "state":"Delta",
+        "minerals":"Clay, Glass-sand, Gypsium, Iron-ore, Kaolin, Lignite, Marble & Oil/Gas"
+      },
+      {
+        "state":"Ebonyi",
+        "minerals":"Gold, Lead/Zinc & Salt"
+    
+      },
+      {
+        "state":"Edo",
+        "minerals":"Bitumen, Clay Dolomite, Phosphate, Glass-sand, Gold, Gypsium,Iron-ore, Lignite, Limestone, Marble & Oil/Gas"
+      },
+      {
+        "state":"Ekiti",
+        "minerals":"Coal, Lead/Zinc & Limestone"
+      },
+      {
+        "state":"Enugu",
+        "minerals":"Bitumen, Clay Dolomite, Phosphate, Glass-sand, Gold, Gypsium,Iron-ore, Lignite, Limestone, Marble & Oil/Gas"
+      },{
+        "state":"Gombe",
+        "minerals":"Gemstone,Gypsium"
+    },
+        {
+        "state":"Imo",
+        "minerals":"Gypsium, Lead/Zinc, Lignite, Limestone, Marcasite, Oil/Gas, Phosphate & Salt"
+      },
+      {
+        "state":"Jigawa",
+        "minerals":"Butyles"
+        }, {
+    "state":"Kaduna",
+    "minerals":"Amethyst, Aqua Marine, Asbestos, Clay, Flosper, Gemstone, Gold, Graphite, Kaolin, Hyanite, Mica, Rock Crystal, Ruby, Sapphire, Sihnite, Superntinite, Tentalime, Topaz & Tourmaline"
+        },
+  
+        {
+            "state":"Kano",
+            "minerals":"Gassiterite, Copper, Gemstone, Glass-sand, Lead/Zinc, Pyrochinre & Tantalite"
+        },
+        {
+    "state":"Katsina",
+    "minerals":"Cassiterite, Columbite, Feldspar, Gold, Iron-ore, Marble, Mica & Tantalite"
+  },
+  {
+    "state":"Kogi",
+    "minerals":"Cole, Dolomite, Feldspar, Gypsium, Iron-ore, Kaolin, Marble, Talc & Tantalite"
+  },
+  {
+    "state":"Kwara",
+    "minerals":"Cassiterite, Columbite, Feldspar, Gold, Iron-ore, Marble, Mica & Tantalite"
+  },
+  {
+    "state":"Lagos",
+    "minerals":"Bitumen, Clay & Glass-sand"
+  },
+  {
+    "state":"Nasarawaa",
+    "minerals":"Amethyst (Topaz Garnet), Barytex, Barite, Cassirite, Chalcopyrite, Clay, Columbite, Coking Coal, Dolomite/Marble, Feldspar, Galena, Iron-ore, Limstone, Mica, Salt, Sapphire, Talc, Tantalite, Tourmaline Quartz & Zireon"
+  },
+  {
+    "state":"Niger",
+    "minerals":"Gold, Lead,Zinc,Talc"
+  },
+  {
+    "state":"Ogun",
+    "minerals":"Bitumen, Clay, Feldspar, Gemstone, Kaolin, Limestone & Phosphate"
+  },
+  {
+    "state":"Ondo",
+    "minerals":"Columbite, Gold, Granite, Talc, Tantalite & Tourmaline"
+  },
+  {
+    "state":"Oyo",
+    "minerals":"Aqua Marine, Cassiterite, Clay, Dolomite, Gemstone, Gold, Kaolin, Marble, Silimonite, Talc & Tantalite"
+  },  {
+    "state":"Plateau",
+    "minerals":"Barite, Bauxite, Betonite, Bismuth, Cassiterite, Clay, Coal, Emeral, Fluoride, Gemstone, Granite, Iron-ore, Kaolin,Lead/Zinc, Marble, Molybdenite, Phrochlore, Salt, Tantalite/Columbite, Tin & Wolframc"
+  },
+  {
+    "state":"Rivers",
+    "minerals":"GClay, Glass-Sand, Lignite, Marble & Oil/Gas"
+  },
+  {
+    "state":"Sokoto",
+    "minerals":"Clay, Flakes, Gold, Granite, Gypsium, Kaolin, Laterite, Limestone, Phosphate, Potash, Silica Sand & Salt"
+  },
+  {
+    "state":"Taraba",
+    "minerals":"Lead,Zinc"
+  },
+  {
+    "state":"Yobe",
+    "minerals":"Soda Ash,Tintomite"
+  },
+  {
+    "state":"Zamfara",
+    "minerals":"Coal, Cotton,Gold"
+  }
+ ]
