@@ -19,9 +19,9 @@ const page = () => {
     router.push("/map");
   };
   return (
-    <div className="flex">
-      <div className="bg-gray-200 w-1/6 flex">
-        <div className="bg-[#1F263E] w-screen">
+    <div className=" flex">
+      <div className="bg-gray-200 w-1/6 flex flex-col-2">
+        <div className="bg-[#1F263E] w-screen flex">
           <nav>
             <ul>
               <li>
@@ -61,13 +61,11 @@ const page = () => {
                 </div>
               </li>
             </ul>
-                  </nav>
-                  <div className=" w-4/6">
+          </nav>
+          <div className=" w-4/6">
             <Image src={Map} />
           </div>
         </div>
-         
-
       </div>
     </div>
   );
