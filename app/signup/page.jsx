@@ -22,7 +22,10 @@ const SignUp = () => {
       toast.error("All credentials are required and must be greater than 5 !");
     }
     try {
-      const response = await axios.post("/api/users/signup", user);
+      const response = await axios.post(
+        "https://nmrems-backend.onrender.com/api/v1/",
+        user
+      );
       toast.success("Registration succcessful!");
       router.push("/signin");
       console.log(user);
@@ -53,16 +56,13 @@ const SignUp = () => {
         <Toaster />
       </div>
       <div className="grid grid-cols-2 justify-center overflow-hidden">
-        <div
-          className="bg-[#1F263E] inv h-screen md:visible"
-          id="rightside"
-        >
+        <div className="bg-[#1F263E] inv h-screen md:visible" id="rightside">
           <p className="text-white text-">Sign up</p>
         </div>
         <div className="bg-white flex justify-center items-center h-screen overflow-hidden">
           <div className="flex flex-col items-center justify-center h-screen">
             <h1 className=" font-bold text-2xl text-center">Sign Up</h1>
-            <p>Welcome Back! Please enter your details </p>
+            <p>Hello,Please fill the form below to get started </p>
             <br />
             <form>
               <div className="my-2 ">

@@ -19,7 +19,10 @@ const Login = () => {
   });
   const OnLogin = async () => {
     try {
-      const response = await axios.post("/api/users/signin", user);
+      const response = await axios.post(
+        "https://nmrems-backend.onrender.com/api/v1/health",
+        user
+      );
       console.log("Login Successfull", response.data);
       toast.success("Login Successful");
       router.push("/dashboard");
@@ -40,7 +43,7 @@ const Login = () => {
 
   const passwordClick = () => {
     if (type === "password") {
-      setType("text");
+      setType("password");
       setIcon(GoEyeClosed);
     } else {
       setType("password");
