@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ImSwitch } from "react-icons/im";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { Toast, toast } from "react-hot-toast";
+import {  toast } from "react-hot-toast";
 
 
 
@@ -30,7 +30,7 @@ cookie.remove('token')
 
   return (
     <div>
-      <di><Toast/></di>
+      {/* <div><Toast/></div> */}
     <button className="flex text-gray-600 bg-inherit hover:bg-[#49516f] hover:text-white focus h-9  justify-center mt-2 overflow-hidden" onClick={handleLogout}>
       Log Out
     </button>
