@@ -6,7 +6,7 @@ const Mapping = () => {
   return (
     <>
       <div className="flex text-gray-600 bg-inherit hover:bg-[#49516f] hover:text-white focus h-9  justify-center mt-2 overflow-hidden">
-        <Link href="/notification" className="flex">
+        <Link href="/mapping" className="flex">
           <div className="ml-1 mt-2">
             <RiLoopLeftFill />
           </div>

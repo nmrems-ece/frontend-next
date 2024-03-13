@@ -9,17 +9,17 @@ import { MdOutlineSignalCellular4Bar } from "react-icons/md";
 
 const ChakraCard = () => {
   return (
-    <div className="border-slate-200 overflow-none max-w-wrap">
+    <div className="border-slate-200 overflow-none max-w-wrap flex justify-center">
       <div class="divide-y divide-slate-200 flex flex-col justify-start p-2">
         <div className="flex justify-start divide-slate-200 p-3"></div>
         <div className="">
           <div className="flex">
             <MdOutlineSignalCellular4Bar />
-            <h1 className="font-bold font-lg">Natural Resources</h1>
+            <h1 className="font-bold font-lg ml-2">Natural Resources</h1>
           </div>
-          <h1 className="font-bold">Price</h1>
+          <h1 className="font-bold ml-4">Price</h1>
         </div>
-        <div className="flex justify-start wrap p-2">
+        <div className="flex justify-center wrap p-2">
           <div className="flex justify-start">
             <Image src={gold} className="ml-0" />
             <h1 className="font-bold ml-2">Gold</h1>
@@ -31,9 +31,9 @@ const ChakraCard = () => {
             <Image src={red} className="rounded-full w-5 h-5 mt-1" />
           </div>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-center wrap p-2">
           <div className="flex justify-start">
-            <Image src={gold} className="ml-2" />
+            <Image src={gold} className="ml-1" />
             <h1 className="font-bold ml-2">Zinc</h1>
           </div>
           <div className="flex ml-2">
@@ -43,8 +43,8 @@ const ChakraCard = () => {
             <Image src={green} className="rounded-full w-5 h-5 mt-1" />
           </div>
         </div>
-        <div className="flex justify-start wrap p-2">
-          <div className="flex justify-start">
+        <div className="flex justify-center wrap p-2">
+          <div className="flex justify-start ml-1">
             <Image src={gold} className="ml-2" />
             <h1 className="font-bold ml-2">Oil/Gas</h1>
           </div>
@@ -55,7 +55,7 @@ const ChakraCard = () => {
             <Image src={red} className="rounded-full w-5 h-5 mt-1" />
           </div>
         </div>
-        <div className="flex justify-start wrap p-2">
+        <div className="flex justify-center wrap p-2">
           <div className="flex justify-start">
             <Image src={gold} className="ml-0" />
             <h1 className="font-bold ml-2">Salt</h1>
@@ -67,8 +67,8 @@ const ChakraCard = () => {
             <Image src={red} className="rounded-full w-5 h-5 mt-1" />
           </div>
         </div>
-        <div className="flex justify-start wrap p-22">
-          <div className="flex justify-start">
+        <div className="flex justify-center wrap p-2">
+          <div className="flex justify-start ml-4">
             <Image src={gold} className="ml-0" />
             <h1 className="font-bold ml-2">Diamond</h1>
           </div>

@@ -20,7 +20,7 @@ const Login = () => {
   const OnLogin = async () => {
     try {
       const response = await axios.post(
-        "https://nmrems-backend.onrender.com/api/v1/health",
+        "https://nmrems-backend.onrender.com/api/v1/auth/admin/signin",
         user
       );
       console.log("Login Successfull", response.data);
@@ -37,13 +37,12 @@ const Login = () => {
       toast.success("Please Provide credentials to login");
     }
   }, [user]);
-
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(FaRegEyeSlash);
 
   const passwordClick = () => {
     if (type === "password") {
-      setType("password");
+      setType("text");
       setIcon(GoEyeClosed);
     } else {
       setType("password");
@@ -56,11 +55,11 @@ const Login = () => {
       <div>
         <Toaster />
       </div>
-      <div className="grid grid-cols-2 justify-center wrap ">
-        <div className="bg-[#1F263E] h-screen">
+      <div className="flex">
+        <div className="bg-[#1F263E] grow  hidden sm:block h-screen md:visible">
           <p className="text-white">Sign in</p>
         </div>
-        <div className="bg-white flex justify-center h-screen align-middle overflow-hidden">
+        <div className="bg-white flex grow justify-center items-center h-screen overflow-hidden">
           <div className="flex flex-col align-middle justify-center h-screen">
             <h1 className=" font-bold text-2xl ml-14">Welcome Back</h1>
             <p>Welcome Back! Please enter your details </p>
@@ -81,7 +80,7 @@ const Login = () => {
                 </span>
               </div>
             </div>
-            <div className="bg-white rounded-lg h-2 w-64 my-0 py-0.5 outline-hidden">
+            <div className="bg-white rounded-lg h-2 w-64 my-0 py-0 outline-hidden">
               <label htmlFor="password">Password</label>
               <br />
               <div className="bg-slate-200 flex rounded w-72">
@@ -94,21 +93,26 @@ const Login = () => {
                   }}
                 />
                 <span className="my-2">
-                  <FaRegEyeSlash icon={FaRegEyeSlash} onClick={passwordClick} />
+                  <FaRegEyeSlash icon onClick={passwordClick} />
                 </span>
               </div>
             </div>
             <br />
-            <Link href="/passwordreset" className="m-5 p-5 flex">
-              <p className="flex ml-20 text-blue-700">Forgot password?</p>
+            <Link
+              href="/passwordreset"
+              className="mt-4 p-2 flex justify-item-end items-end ml-36"
+            >
+              <p className="flex justify-item-end text-blue-700">
+                Forgot password?
+              </p>
             </Link>
 
-            <div className="w-72 rounded bg-slate-600  my-4 w-64 rounded   bg-slate-60o w-64">
+            <div className="w-72 rounded bg-slate-600  my-4 w-64 rounded  bg-slate-60o w-64">
               <button
                 className=" bg-[#1F263E] w-72 rounded  p-1.5 bg-slate-60o w-64 text-white"
                 onClick={OnLogin}
               >
-                SignUp
+                Sign in
               </button>
             </div>
             <p className="mt-4 bottom-0 flex justify-center">

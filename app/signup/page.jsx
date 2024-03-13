@@ -12,19 +12,27 @@ import { Toaster, toast } from "react-hot-toast";
 const SignUp = () => {
   const router = useRouter();
   const [user, setUser] = useState({
-    fullname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
 
   const OnSignup = async () => {
-    if (user.fullname < 5 && user.email < 5 && user.password < 4) {
-      toast.error("All credentials are required and must be greater than 5 !");
-    }
+    // if (user.fullname < 5 && user.email < 5 && user.password < 4) {
+    //   toast.error("All credentials are required and must be greater than 5 !");
+    // }
     try {
       const response = await axios.post(
-        "https://nmrems-backend.onrender.com/api/v1/",
-        user
+        "https://nmrems-backend.onrender.com/api/v1/auth/admin/signup",
+        user,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "x-admin-token":
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjkzMDYzMDQ2OTkiLCJpYXQiOjE2OTcxOTU5NTd9.ynN7Xs-5T20Zhw_Vey7TyYASYoR5UfoT5l2SR6Lem2s",
+          },
+        }
       );
       toast.success("Registration succcessful!");
       router.push("/signin");
@@ -55,30 +63,51 @@ const SignUp = () => {
       <div>
         <Toaster />
       </div>
-      <div className="grid grid-cols-2 justify-center overflow-hidden">
-        <div className="bg-[#1F263E] inv h-screen md:visible" id="rightside">
+      <div className="flex ">
+        <div
+          className="bg-[#1F263E] grow  hidden sm:block h-screen md:visible"
+          id="rightside"
+        >
           <p className="text-white text-">Sign up</p>
         </div>
-        <div className="bg-white flex justify-center items-center h-screen overflow-hidden">
-          <div className="flex flex-col items-center justify-center h-screen">
+        <div className="bg-white flex grow justify-center items-center h-screen overflow-hidden">
+          <div className="flex flex-col item-center justify-center h-screen">
             <h1 className=" font-bold text-2xl text-center">Sign Up</h1>
             <p>Hello,Please fill the form below to get started </p>
             <br />
             <form>
               <div className="my-2 ">
-                <label htmlFor="email">Full Name</label>
+                <label htmlFor="email">First Name</label>
                 <br />
-                <div className="bg-slate-200 flex rounded">
+                <div className="bg-slate-200 flex rounded justify-between">
                   <input
                     id="fullname"
                     className="w-64 bg-inherit border-none outline-none rounded ml-2"
                     type="text"
-                    value={user.fullname}
+                    value={user.firstName}
                     onChange={(e) =>
-                      setUser({ ...user, fullname: e.target.value })
+                      setUser({ ...user, firstName: e.target.value })
                     }
                   />
-                  <span className="my-2">
+                  <span className="my-2 mr-2">
+                    <IoPersonOutline />
+                  </span>
+                </div>
+              </div>
+              <div className="my-2">
+                <label htmlFor="email">Last Name</label>
+                <br />
+                <div className="bg-slate-200 flex rounded justify-between">
+                  <input
+                    id="fullname"
+                    className="w-64 bg-inherit border-none outline-none rounded ml-2"
+                    type="text"
+                    value={user.lastName}
+                    onChange={(e) =>
+                      setUser({ ...user, lastName: e.target.value })
+                    }
+                  />
+                  <span className="my-2 mr-2">
                     <IoPersonOutline />
                   </span>
                 </div>
@@ -86,7 +115,7 @@ const SignUp = () => {
               <div className="my-2 ">
                 <label htmlFor="email">Email</label>
                 <br />
-                <div className="bg-slate-200 flex rounded">
+                <div className="bg-slate-200 flex rounded justify-between">
                   <input
                     className="w-64 bg-inherit border-none outline-none rounded ml-2"
                     type="text"
@@ -95,15 +124,15 @@ const SignUp = () => {
                       setUser({ ...user, email: e.target.value })
                     }
                   />
-                  <span className="my-2">
+                  <span className="my-2 mr-2">
                     <MdAlternateEmail />
                   </span>
                 </div>
               </div>
               <div className="my-2 ">
-                <label htmlFor="password">Create Password</label>
+                <label htmlFor="password"> Password</label>
                 <br />
-                <div className="bg-slate-200 flex rounded">
+                <div className="bg-slate-200 flex rounded justify-between">
                   <input
                     className="w-64 bg-inherit border-none outline-none rounded ml-2"
                     type={type}
@@ -115,28 +144,15 @@ const SignUp = () => {
                       })
                     }
                   />
-                  <span className="my-2">
-                    <FaRegEyeSlash onClick={passwordClick} />
-                  </span>
-                </div>
-              </div>
-              <div className="my-2">
-                <label htmlFor="confirmpassword">Confirm Password</label>
-                <br />
-                <div className="bg-slate-200 flex rounded">
-                  <input
-                    className="w-64 bg-inherit border-none outline-none rounded ml-2"
-                    type={type}
-                  />
-                  <span className="my-2">
+                  <span className="my-2 mr-2">
                     <FaRegEyeSlash onClick={passwordClick} />
                   </span>
                 </div>
               </div>
             </form>
-            <div className="w-72 rounded bg-slate-600  my-4 w-64 rounded   bg-slate-60o w-64">
+            <div className="w-72 rounded bg-slate-600  my-4 ml-3 w-64 rounded bg-slate-60o w-64 flex justify-center items-center">
               <button
-                className=" bg-[#1F263E] w-72 rounded  p-1.5 bg-slate-60o w-64 text-white"
+                className=" bg-[#1F263E] w-72 rounded  p-1.5 bg-slate-60o w-64 text-white flex justify-center items-center "
                 onClick={OnSignup}
               >
                 SignUp

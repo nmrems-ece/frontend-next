@@ -12,21 +12,21 @@ const AppBar = () => {
     router.push("/profile");
   };
   return (
-    <div>
-      <div className="bg-white p-3 ">
-        <div className="flex justify-between rounded-full">
+    <div className="flex justify-between grow overflow-hidden mr-4">
+      <div className="bg-white p-3 flex  grow ">
+        <div className="flex  grow justify-between  rounded-full bg-inherit ">
           <div className="flex overflow-none bg-gray-200 border rounded-full w-64 ">
             <span className="">
               <CiSearch className="m-2" />
             </span>
             <input
-              className="outline-none bg-inherit rounded-full "
+              className="outline-none bg-inherit rounded-full w-full "
               type="search"
               name="search"
               id="search"
             />
           </div>
-          <div className="flex justify-between mr-4 ">
+          <div className="flex justify-between mr-6 ml-4 sm:justify-between">
             <Avatar sizes="10" className="" onClick={ToProfile} />
             <IoSettingsOutline className="ml-1 mt-2.5"/>
             <PiTelegramLogoThin className="ml-1 mt-2.5" />
